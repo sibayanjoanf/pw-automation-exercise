@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.only("Test Case 12: Add Products in Cart", async ({ page }) => {
+test("Test Case 12: Add Products in Cart", async ({ page }) => {
   await page.goto("http://automationexercise.com");
   await expect(page).toHaveTitle(/Automation Exercise/);
   await page.getByRole("link", { name: /Products/ }).click();
