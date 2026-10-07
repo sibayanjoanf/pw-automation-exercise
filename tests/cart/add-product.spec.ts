@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test("Test Case 12: Add Products in Cart", async ({ page }) => {
+test.only("Test Case 12: Add Products in Cart", async ({ page }) => {
   await page.goto("http://automationexercise.com");
   await expect(page).toHaveTitle(/Automation Exercise/);
-  await page.getByRole("link", { name: "Products" }).click();
-  await expect(page.getByText("All Products")).toBeVisible();
+  await page.getByRole("link", { name: /Products/ }).click();
+  await expect(page.getByText(/All Products/)).toBeVisible();
   let chosenProd = [];
 
   // first product add
